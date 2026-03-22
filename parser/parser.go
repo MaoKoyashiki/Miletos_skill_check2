@@ -20,8 +20,9 @@ func ParseFile(filename string) (map[string]any, error) {
 	return Parse(file)
 }
 
-// Parse は io.Reader からデータを読み込み、パース結果のMapを返します。
+// Parse はデータを読み込み、パース結果のMapを返します。
 func Parse(file *os.File) (map[string]any, error) {
+	// envフォルダのscheme.confをもとにスキーママップを作成
 	scheme, err := env.LoadSchema()
 	if err != nil {
 		return nil, err
