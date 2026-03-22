@@ -1,0 +1,1 @@
+env/scheme.confにあるスキーマ要件をvalidateAndConvertでチェックしています。
